@@ -1,0 +1,626 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<!-- <base href="/"> -->
+	<title>Art-Quiz</title>
+	<meta name="description" content="Art-Quiz task RS School">
+	<meta http-equiv="Permissions-Policy" content="interest-cohort=()"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="icon" href="images/favicon.png">
+	<link rel="stylesheet" href="css/style.min.css">
+
+</head>
+
+<body>
+
+	<main class="main">
+		<section class="home">
+			<div class="container">
+				<button class="home-settings"></button>
+				<div class="home-box">
+					<div class="box-logo"></div>
+					<div class="box-buttons">
+						<button class="buttons artists-quiz">Художники</button>
+						<button class="buttons pictures-quiz">Картины</button>
+					</div>
+				</div>
+				<div class="footer footer-mobile">
+					<div class="container">
+						<a href="https://rs.school/" class="footer-logo" target="_blank"></a>
+						<p class="app-dev">Разработчик приложения: Алисеев Андрей</p>
+						<p>&copy; 2021</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="settings">
+			<div class="container">
+
+				<div class="settings-header">
+					<div class="menu-burger-arrow">
+						<button href="" class="menu-btn">
+							<span></span>
+						</button>
+					</div>
+					<p class="title-setting">Настройки</p>
+					<div class="menu-burger">
+						<button href="" class="menu-btn menu-btn2">
+							<span></span>
+						</button>
+					</div>
+				</div>
+
+				<div class="settings-content">
+					<div class="text-save"></div>
+					<div class="settings-volume">
+						<h3 class="h3 text-volume">Громкость</h3>
+						<div class="btn-volume-box">
+							<input id="volume" type="range" min="0" max="100" value="0" step="1" class="progress progress-width player__slider">
+							<button class="button_voice" id="btn-unmute"></button>
+							<button id="btn-mute" class="btn-mute hidden"></button>
+						</div>
+					</div>
+					<div class="settings-time-checkbox">
+						<div class="lang-box">
+							<h3 class="h3 text-lang">Язык</h3>
+							<div class="switch-btn switch-on"><span class="lang">RU</span><span class="lang">EN</span></div>
+						</div>
+						<div class="setting-box">
+							<h3 class="h3 text-time">Время в игре</h3>
+							<label class="switch">
+								<input id="input-check1" type="checkbox">
+								<span class="slider"><span class="lang">ON</span><span class="lang">OFF</span></span>
+							</label>
+						</div>
+					</div>
+					<div class="settings-time-value">
+						<h3 class="h3 text-answer">Время на ответ</h3>
+						<div class="btn-block">
+							<button class="btn-tickets" type="button" onclick="this.nextElementSibling.stepDown()" disabled>&ndash;</button>
+							<input id="input-time" class="number" step="5" type="number" min="5" max="30" value="5" disabled>
+							<button class="btn-tickets" type="button" onclick="this.previousElementSibling.stepUp()" disabled>+</button>
+						</div>
+					</div>
+					<div class="settings-buttons">
+						<button class="buttons settings-default">Сброс</button>
+						<button class="buttons settings-save">Сохранить</button>
+					</div>
+				</div>
+
+			</div>
+		</section>
+		<section class="categories">
+			<div class="container">
+				<div class="categories-header">
+					<div class="categories-logo"></div>
+					<nav class="navigation">
+						<ul>
+							<li><a class="back-to-home" href="">Главная</a></li>
+							<li><a class="disabled" href="">Категории</a></li>
+						</ul>
+					</nav>
+					<button class="home-settings"></button>
+				</div>
+				<div class="categories-image">
+
+					<div class="categories-item">
+						<div class="block-name">
+							<h4 class="h4">Портрет</h4>
+							<div class="result-round"></div>
+						</div>
+						<div class="block-image">
+							<div class="item-image-artist r00"></div>
+							<div class="score-item r00">Результат</div>
+						</div>
+					</div>
+					<div class="categories-item">
+						<div class="block-name">
+							<h4 class="h4">Пейзаж</h4>
+							<div class="result-round"></div>
+						</div>
+						<div class="block-image">
+							<div class="item-image-artist r01"></div>
+							<div class="score-item r01">Результат</div>
+						</div>
+					</div>
+					<div class="categories-item">
+						<div class="block-name">
+							<h4 class="h4">Натюрморт</h4>
+							<div class="result-round"></div>
+						</div>
+						<div class="block-image">
+							<div class="item-image-artist r02"></div>
+							<div class="score-item r02">Результат</div>
+						</div>
+					</div>
+					<div class="categories-item">
+						<div class="block-name">
+							<h4 class="h4">Импрессионизм</h4>
+							<div class="result-round"></div>
+						</div>
+						<div class="block-image">
+							<div class="item-image-artist r03"></div>
+							<div class="score-item r03">Результат</div>
+						</div>
+					</div>
+					<div class="categories-item">
+						<div class="block-name">
+							<h4 class="h4">Экспрессионизм</h4>
+							<div class="result-round"></div>
+						</div>
+						<div class="block-image">
+							<div class="item-image-artist r04"></div>
+							<div class="score-item r04">Результат</div>
+						</div>
+					</div>
+					<div class="categories-item">
+						<div class="block-name">
+							<h4 class="h4">Авангард</h4>
+							<div class="result-round"></div>
+						</div>
+						<div class="block-image">
+							<div class="item-image-artist r05"></div>
+							<div class="score-item r05">Результат</div>
+						</div>
+					</div>
+					<div class="categories-item">
+						<div class="block-name">
+							<h4 class="h4">Ренессанс</h4>
+							<div class="result-round"></div>
+						</div>
+						<div class="block-image">
+							<div class="item-image-artist r06"></div>
+							<div class="score-item r06">Результат</div>
+						</div>
+					</div>
+					<div class="categories-item">
+						<div class="block-name">
+							<h4 class="h4">Сюрреализм</h4>
+							<div class="result-round"></div>
+						</div>
+						<div class="block-image">
+							<div class="item-image-artist r07"></div>
+							<div class="score-item r07">Результат</div>
+						</div>
+					</div>
+					<div class="categories-item">
+						<div class="block-name">
+							<h4 class="h4">Китч</h4>
+							<div class="result-round"></div>
+						</div>
+						<div class="block-image">
+							<div class="item-image-artist r08"></div>
+							<div class="score-item r08">Результат</div>
+						</div>
+					</div>
+					<div class="categories-item">
+						<div class="block-name">
+							<h4 class="h4">Минимализм</h4>
+							<div class="result-round"></div>
+						</div>
+						<div class="block-image">
+							<div class="item-image-artist r09"></div>
+							<div class="score-item r09">Результат</div>
+						</div>
+					</div>
+					<div class="categories-item">
+						<div class="block-name">
+							<h4 class="h4">Интерьер</h4>
+							<div class="result-round"></div>
+						</div>
+						<div class="block-image">
+							<div class="item-image-artist r10"></div>
+							<div class="score-item r10">Результат</div>
+						</div>
+					</div>
+					<div class="categories-item">
+						<div class="block-name">
+							<h4 class="h4">Обнаженная</h4>
+							<div class="result-round"></div>
+						</div>
+						<div class="block-image">
+							<div class="item-image-artist r11"></div>
+							<div class="score-item r11">Результат</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+		<section class="categories2">
+			<div class="container">
+				<div class="categories-header">
+					<div class="categories-logo"></div>
+					<nav class="navigation">
+						<ul>
+							<li><a class="back-to-home" href="">Главная</a></li>
+							<li><a class="disabled" href="">Категории</a></li>
+						</ul>
+					</nav>
+					<button class="home-settings"></button>
+				</div>
+				<div class="categories-image">
+
+					<div class="categories-item">
+						<div class="block-name">
+							<h4 class="h4">Портрет</h4>
+							<div class="result-round2"></div>
+						</div>
+						<div class="block-image">
+							<div class="item-image-artist2 r00"></div>
+							<div class="score-item2 r00">Результат</div>
+						</div>
+					</div>
+					<div class="categories-item">
+						<div class="block-name">
+							<h4 class="h4">Пейзаж</h4>
+							<div class="result-round2"></div>
+						</div>
+						<div class="block-image">
+							<div class="item-image-artist2 r01"></div>
+							<div class="score-item2 r01">Результат</div>
+						</div>
+					</div>
+					<div class="categories-item">
+						<div class="block-name">
+							<h4 class="h4">Натюрморт</h4>
+							<div class="result-round2"></div>
+						</div>
+						<div class="block-image">
+							<div class="item-image-artist2 r02"></div>
+							<div class="score-item2 r02">Результат</div>
+						</div>
+					</div>
+					<div class="categories-item">
+						<div class="block-name">
+							<h4 class="h4">Импрессионизм</h4>
+							<div class="result-round2"></div>
+						</div>
+						<div class="block-image">
+							<div class="item-image-artist2 r03"></div>
+							<div class="score-item2 r03">Результат</div>
+						</div>
+					</div>
+					<div class="categories-item">
+						<div class="block-name">
+							<h4 class="h4">Экспрессионизм</h4>
+							<div class="result-round2"></div>
+						</div>
+						<div class="block-image">
+							<div class="item-image-artist2 r04"></div>
+							<div class="score-item2 r04">Результат</div>
+						</div>
+					</div>
+					<div class="categories-item">
+						<div class="block-name">
+							<h4 class="h4">Авангард</h4>
+							<div class="result-round2"></div>
+						</div>
+						<div class="block-image">
+							<div class="item-image-artist2 r05"></div>
+							<div class="score-item2 r05">Результат</div>
+						</div>
+					</div>
+					<div class="categories-item">
+						<div class="block-name">
+							<h4 class="h4">Ренессанс</h4>
+							<div class="result-round2"></div>
+						</div>
+						<div class="block-image">
+							<div class="item-image-artist2 r06"></div>
+							<div class="score-item2 r06">Результат</div>
+						</div>
+					</div>
+					<div class="categories-item">
+						<div class="block-name">
+							<h4 class="h4">Сюрреализм</h4>
+							<div class="result-round2"></div>
+						</div>
+						<div class="block-image">
+							<div class="item-image-artist2 r07"></div>
+							<div class="score-item2 r07">Результат</div>
+						</div>
+					</div>
+					<div class="categories-item">
+						<div class="block-name">
+							<h4 class="h4">Китч</h4>
+							<div class="result-round2"></div>
+						</div>
+						<div class="block-image">
+							<div class="item-image-artist2 r08"></div>
+							<div class="score-item2 r08">Результат</div>
+						</div>
+					</div>
+					<div class="categories-item">
+						<div class="block-name">
+							<h4 class="h4">Минимализм</h4>
+							<div class="result-round2"></div>
+						</div>
+						<div class="block-image">
+							<div class="item-image-artist2 r09"></div>
+							<div class="score-item2 r09">Результат</div>
+						</div>
+					</div>
+					<div class="categories-item">
+						<div class="block-name">
+							<h4 class="h4">Интерьер</h4>
+							<div class="result-round2"></div>
+						</div>
+						<div class="block-image">
+							<div class="item-image-artist2 r10"></div>
+							<div class="score-item2 r10">Результат</div>
+						</div>
+					</div>
+					<div class="categories-item">
+						<div class="block-name">
+							<h4 class="h4">Обнаженная</h4>
+							<div class="result-round2"></div>
+						</div>
+						<div class="block-image">
+							<div class="item-image-artist2 r11"></div>
+							<div class="score-item2 r11">Результат</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+		<section class="scores">
+			<div class="container">
+				<div class="scores-header">
+					<div class="scores-logo"></div>
+					<nav class="scores-navigation">
+						<ul>
+							<li><a class="back-to-home" href="">Главная</a></li>
+							<li><a class="back-to-category" href="">Категории</a></li>
+							<li><a class="disabled" href="">Результат</a></li>
+						</ul>
+					</nav>
+					<button class="home-settings"></button>
+				</div>
+				<div class="scores-image">
+
+					<div class="scores-item">
+						<h4 class="h4 scores-title"></h4>
+						<div class="block-scores-image">
+							<div class="scores-image-artist r00"></div>
+							<div class="scores-info">
+								<p class="scores-name-image"></p>
+								<p class="scores-author"></p>
+								<p class="scores-years"></p>
+							</div>
+						</div>
+					</div>
+					<div class="scores-item">
+						<h4 class="h4 scores-title"></h4>
+						<div class="block-scores-image">
+							<div class="scores-image-artist r01"></div>
+							<div class="scores-info">
+								<p class="scores-name-image"></p>
+								<p class="scores-author"></p>
+								<p class="scores-years"></p>
+							</div>
+						</div>
+					</div>
+					<div class="scores-item">
+						<h4 class="h4 scores-title"></h4>
+						<div class="block-scores-image">
+							<div class="scores-image-artist r02"></div>
+							<div class="scores-info">
+								<p class="scores-name-image"></p>
+								<p class="scores-author"></p>
+								<p class="scores-years"></p>
+							</div>
+						</div>
+					</div>
+					<div class="scores-item">
+						<h4 class="h4 scores-title"></h4>
+						<div class="block-scores-image">
+							<div class="scores-image-artist r03"></div>
+							<div class="scores-info">
+								<p class="scores-name-image"></p>
+								<p class="scores-author"></p>
+								<p class="scores-years"></p>
+							</div>
+						</div>
+					</div>
+					<div class="scores-item">
+						<h4 class="h4 scores-title"></h4>
+						<div class="block-scores-image">
+							<div class="scores-image-artist r04"></div>
+							<div class="scores-info">
+								<p class="scores-name-image"></p>
+								<p class="scores-author"></p>
+								<p class="scores-years"></p>
+							</div>
+						</div>
+					</div>
+					<div class="scores-item">
+						<h4 class="h4 scores-title"></h4>
+						<div class="block-scores-image">
+							<div class="scores-image-artist r05"></div>
+							<div class="scores-info">
+								<p class="scores-name-image"></p>
+								<p class="scores-author"></p>
+								<p class="scores-years"></p>
+							</div>
+						</div>
+					</div>
+					<div class="scores-item">
+						<h4 class="h4 scores-title"></h4>
+						<div class="block-scores-image">
+							<div class="scores-image-artist r06"></div>
+							<div class="scores-info">
+								<p class="scores-name-image"></p>
+								<p class="scores-author"></p>
+								<p class="scores-years"></p>
+							</div>
+						</div>
+					</div>
+					<div class="scores-item">
+						<h4 class="h4 scores-title"></h4>
+						<div class="block-scores-image">
+							<div class="scores-image-artist r07"></div>
+							<div class="scores-info">
+								<p class="scores-name-image"></p>
+								<p class="scores-author"></p>
+								<p class="scores-years"></p>
+							</div>
+						</div>
+					</div>
+					<div class="scores-item">
+						<h4 class="h4 scores-title"></h4>
+						<div class="block-scores-image">
+							<div class="scores-image-artist r08"></div>
+							<div class="scores-info">
+								<p class="scores-name-image"></p>
+								<p class="scores-author"></p>
+								<p class="scores-years"></p>
+							</div>
+						</div>
+					</div>
+					<div class="scores-item">
+						<h4 class="h4 scores-title"></h4>
+						<div class="block-scores-image">
+							<div class="scores-image-artist r09"></div>
+							<div class="scores-info">
+								<p class="scores-name-image"></p>
+								<p class="scores-author"></p>
+								<p class="scores-years"></p>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+		<section class="round">
+			<div class="container">
+				<div class="round-header">
+					<div class="round-logo"></div>
+					<nav class="round-navigation">
+						<ul>
+							<li><a class="back-to-home" href="">Главная</a></li>
+							<li><a class="back-to-category" href="">Категории</a></li>
+							<li><a class="disabled" href="">Раунд</a></li>
+						</ul>
+					</nav>
+					<button class="home-settings"></button>
+				</div>
+				<div class="round-game">
+
+					<div class="box-timer">
+						<div class="round-question">Кто автор данной картины?</div>
+						<div class="round-time"></div>
+					</div>
+					<div class="round-image"></div>
+					<div class="pagination">
+						<div class="pagination-item"></div>
+						<div class="pagination-item"></div>
+						<div class="pagination-item"></div>
+						<div class="pagination-item"></div>
+						<div class="pagination-item"></div>
+						<div class="pagination-item"></div>
+						<div class="pagination-item"></div>
+						<div class="pagination-item"></div>
+						<div class="pagination-item"></div>
+						<div class="pagination-item"></div>
+					</div>
+					<div class="round-buttons">
+						<button class="buttons round-answer"></button>
+						<button class="buttons round-answer"></button>
+						<button class="buttons round-answer"></button>
+						<button class="buttons round-answer"></button>
+					</div>
+
+				</div>
+			</div>
+		</section>
+		<section class="round2">
+			<div class="container">
+				<div class="round-header">
+					<div class="round-logo"></div>
+					<nav class="round-navigation">
+						<ul>
+							<li><a class="back-to-home" href="">Главная</a></li>
+							<li><a class="back-to-category" href="">Категории</a></li>
+							<li><a class="disabled" href="">Раунд</a></li>
+						</ul>
+					</nav>
+					<button class="home-settings"></button>
+				</div>
+				<div class="round-pictures-game">
+
+					<div class="box-timer box-timer2">
+						<div class="round-question">Какую картину написал <span class="name-author"></span>?</div>
+						<div class="round-time2"></div>
+					</div>
+					<div class="round-pictures">
+						<div class="round-img"></div>
+						<div class="round-img"></div>
+						<div class="round-img"></div>
+						<div class="round-img"></div>
+					</div>
+					<div class="pagination">
+						<div class="pagination-item2"></div>
+						<div class="pagination-item2"></div>
+						<div class="pagination-item2"></div>
+						<div class="pagination-item2"></div>
+						<div class="pagination-item2"></div>
+						<div class="pagination-item2"></div>
+						<div class="pagination-item2"></div>
+						<div class="pagination-item2"></div>
+						<div class="pagination-item2"></div>
+						<div class="pagination-item2"></div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+		<section class="popup-answer">
+			<div class="popup-wrapper">
+				<div class="block-picture">
+					<div class="popup-picture"></div>
+					<div class="popup-icon"></div>
+				</div>
+				<h3 class="h3 popup-name-picture"></h3>
+				<div class="popup-text">
+					<p class="popup-author"></p>
+					<p class="popup-years"></p>
+				</div>
+				<button class="button popup-next">Продолжить</button>
+				<button class="button popup-next2">Продолжить</button>
+			</div>
+		</section>
+		<section class="popup-result">
+			<div class="popup-result-wrapper">
+				<div class="popup-result-icon"></div>
+				<h3 class="h3 popup-result-text">Поздравляем!</h3>
+				<div class="popup-result-number"></div>
+				<div class="block-buttons">
+					<button class="button popup-result-home">Главная</button>
+					<button class="button popup-result-next">Продолжить</button>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer class="footer footer-desktop">
+		<div class="container">
+			<a href="https://rs.school/" class="footer-logo" target="_blank"></a>
+			<p class="app-dev">Разработчик приложения: Алисеев Андрей</p>
+			<p>&copy; 2021</p>
+		</div>
+	</footer>
+
+
+
+	<script type="module" src="js/app.min.js"></script>
+
+</body>
+</html>
